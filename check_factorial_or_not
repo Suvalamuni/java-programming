@@ -1,26 +1,36 @@
 import java.util.Scanner;
-public class perfect_number
+class factorial
 {
-    public static void main(String args[])
+ public static void main(String[] args)
+ {
+   try
+   {
+    int n,fact=1,i;
+    Scanner s= new Scanner(System.in);
+    System.out.print(" Enter the number : ");
+    n= s.nextInt();
+    if(n<=0)
     {
-        long n, sum=0;
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the number: ");
-        n=sc.nextLong();
-        int i=1;
-        while(i <= n/2)
-        {
-            if(n % i == 0)
-            {
-                sum = sum + i;
-            }
-            i++;
-        }
-        if(sum==n)
-        {
-            System.out.println(n+" is a perfect number.");
-        }
-        else
-            System.out.println(n+" is not a perfect number.");
+       System.out.print("Enter only positive numbers");
     }
+    else
+    {
+        for(i=1;i<=n;i++)
+         {
+              fact=fact*i;
+          }
+        System.out.print("The factorial of "+n+" is "+fact); 
+    }
+    
+    
+    
+    }
+    catch(Exception e)
+    {
+        System.out.print("Enter only numbers");
+    }
+  }
 }
+    
+    
+   
